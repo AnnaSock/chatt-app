@@ -1,0 +1,16 @@
+{
+  "alice": {
+    "id": 1,
+    "email": "alice.dupont@example.com",
+    "numero": "781832623",
+    "role": "admin",
+    "actif": true
+  },
+  "bob": {
+    "id": 2,
+    "email": "bob.martin@example.com",
+    "numero": "781832623",
+    "role": "vigile",
+    "actif": false
+  }
+}
