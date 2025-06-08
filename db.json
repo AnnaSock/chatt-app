@@ -1,16 +1,25 @@
 {
-  "alice": {
-    "id": 1,
-    "email": "alice.dupont@example.com",
-    "numero": "781832623",
-    "role": "admin",
-    "actif": true
-  },
-  "bob": {
-    "id": 2,
-    "email": "bob.martin@example.com",
-    "numero": "781832623",
-    "role": "vigile",
-    "actif": false
-  }
+  "contacts": [
+    {
+      "id": "1",
+      "nom": "Sock",
+      "prenom": "Anna",
+      "numero": "781832623",
+      "motDePasse": "passer"
+    },
+    {
+      "id": "2",
+      "nom": "Sy",
+      "prenom": "Anta",
+      "numero": "786556543",
+      "motDePasse": "passer1"
+    }
+  ],
+  "groupes": [
+    {
+      "id": 1,
+      "nom": "mafia",
+      "membres": "2"
+    }
+  ]
 }
