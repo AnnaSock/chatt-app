@@ -4,7 +4,7 @@ import { createElement } from "../component.js"
 export function renderLoginPage(){
     return createElement('div', {id:"container", class:"bg-gradient-to-br from-gray-100 via-summer-shower to-gray-200 min-h-screen flex flex-col items-center justify-center p-4"} , [
                         createElement('div', {}, [
-                                     createElement('img', {src: "../public/logo_odc.png?v=1", class: "w-[15rem] h-[15rem]"})
+                                     createElement('img', {src: "/logo_odc.png?v=1", class: "w-[15rem] h-[15rem]"})
                         ]),
                         createElement('div', {class:"w-[30rem] h-[25rem]"}, [
                                      createElement('div',{class:"text-center mb-8"},[
