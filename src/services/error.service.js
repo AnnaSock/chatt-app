@@ -1,18 +1,6 @@
-// export function afficherErreur(id, message) {
-//   const element = document.getElementById(id)
-//   if (element) {
-//     element.textContent = message
-//     element.classList.remove("hidden")
-//   }
-// }
+import { createElement } from "../component.js";
 
-// export function effacerErreur(id) {
-//   const element = document.getElementById(id)
-//   if (element) {
-//     element.textContent = ''
-//     element.classList.add("hidden")
-//   }
-// }
+
 
 
 export function afficherErreur(message, tag) {
@@ -23,4 +11,10 @@ export function afficherErreur(message, tag) {
 
 export function effacerErreur(tag) {
     tag.textContent = '';
+}
+
+
+export function error404(){
+      const pageErreur = createElement('h1', {}, 'Error 404, Page introuvable')
+      return pageErreur
 }

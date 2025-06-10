@@ -3,7 +3,7 @@
 
 import { afficherPageAcceuil } from "./src/controllers/controller.acceuil.js"
 import{afficherPageConnexion} from "./src/controllers/controller.connexion.js"
-
+import { error404 } from "./src/services/error.service.js";
 
 const routes = {
     "/connexion" : afficherPageConnexion,
@@ -21,7 +21,7 @@ export function route(chemin) {
     if (views) {
         views();
     } else {
-        console.error("Erreur: Chemin non trouvé -", chemin);
+        error404()
     }
 }
 
