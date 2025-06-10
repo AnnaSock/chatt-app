@@ -1,33 +1,30 @@
-// import { renderLoginPage } from "./src/views/views.connexion"
-
-// const routes= {
-//     "/page": renderLoginPage
-// }
 
 
 
-// export function route(chemin){
-//  const views = routes[chemin]
-//  const app = document.getElementById('app')
+import { afficherPageAcceuil } from "./src/controllers/controller.acceuil.js"
+import{afficherPageConnexion} from "./src/controllers/controller.connexion.js"
 
-//  app.innerHTML= ""
-//  app.appendChild(views())
-// }
-
-
-import{renderLoginPage} from "./src/views/views.connexion.js"
 
 const routes = {
-    "/connexion" : renderLoginPage,
+    "/connexion" : afficherPageConnexion,
+    "/acceuil" : afficherPageAcceuil,
 }
 
-export function route(chemin){
-    const views = routes[chemin] || renderLoginPage
-    const body = document.querySelector('body')
-    document.body.innerHTML= ""
-    body.appendChild(views())
+// export function route(chemin){
+//     const views = routes[chemin] 
+//     const body = document.querySelector('body')
+//     body.appendChild(views())
+// }
+
+export function route(chemin) {
+    const views = routes[chemin];
+    if (views) {
+        views();
+    } else {
+        console.error("Erreur: Chemin non trouvé -", chemin);
+    }
 }
 
-export function redirectToRoute(path){
-    location.hash= path
-}
+
+
+
