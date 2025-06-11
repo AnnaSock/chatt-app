@@ -2,13 +2,18 @@ import { createElement } from "../component.js"
 
 
 export function renderPageAcceuil(){
-    const page = createElement('div', {id: "container" , class :"grid grid-cols-3 gap-4"}, [
-                              createElement('div', {class: "bg-blue-200 p-4 rounded"}),
-                              createElement('div', {class: "bg-green-200 p-4 rounded"}),
-                              createElement('div', {class: "bg-red-200 p-4 rounded"}),
+    //  const utilisateurJSON = localStorage.getItem("utilisateurConnecte")
+    //  const utilisateur = utilisateurJSON ? JSON.parse(utilisateurJSON) : null
 
-                 ])
-    
+    //     if (!utilisateur) {
+    //         route("/connexion")
+    //         return
+    //     }
+// createElement("h1", {}, `Bienvenue ${utilisateur.nom || "Utilisateur"} !`)
+
+
+    const page = createElement('div', {id: "container"}, )
+     
     
     
     

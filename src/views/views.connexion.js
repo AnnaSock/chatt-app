@@ -33,7 +33,11 @@ export function renderLoginPage(){
                                                                 createElement('small', {id: 'erreur-mdp', class: "hidden text-[1rem] text-red-500 mt-[1rem] ml-[1rem]"}),
 
                                                   ]),
-                                                  createElement("button", {class:"w-full py-4 rounded-full bg-gradient-to-r from-[#e84f0b] to-[#fb6123] text-white font-semibold text-lg shadow-lg hover:from-[#fb6123] hover:to-[#fb6123] hover:shadow-xl hover:-translate-y-1 transition-all duration-300", type:"submit",}, 'Se connecter')
+                                                  createElement("button", {class:"w-full py-4 rounded-full bg-gradient-to-r from-[#e84f0b] to-[#fb6123] text-white font-semibold text-lg shadow-lg hover:from-[#fb6123] hover:to-[#fb6123] hover:shadow-xl hover:-translate-y-1 transition-all duration-300", type:"submit",}, 'Se connecter'),
+                                                  createElement('div', {class: "text-center"}, [
+                                                               createElement('a', {id: "inscription", class: "text-gray-600 hover:text-gray-800 italic transition-colors text-sm"}, "S'inscrire")
+                                                  ]),
+
                                      ])
                         ])
     
@@ -43,6 +47,5 @@ export function renderLoginPage(){
   return page
 
 }
-
 
 
