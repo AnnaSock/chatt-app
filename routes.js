@@ -1,13 +1,15 @@
 
 
 
-import { afficherPageAcceuil } from "./src/controllers/controller.acceuil.js"
 import{afficherPageConnexion} from "./src/controllers/controller.connexion.js"
-
+import { afficherPageAcceuil } from "./src/controllers/controller.acceuil.js"
+import { afficherPageInscription } from "./src/controllers/controller.inscription.js";
+import { error404 } from "./src/services/error.service.js";
 
 const routes = {
     "/connexion" : afficherPageConnexion,
     "/acceuil" : afficherPageAcceuil,
+    "/inscription" : afficherPageInscription,
 }
 
 // export function route(chemin){
@@ -21,7 +23,7 @@ export function route(chemin) {
     if (views) {
         views();
     } else {
-        console.error("Erreur: Chemin non trouvé -", chemin);
+        error404()
     }
 }
 
