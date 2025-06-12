@@ -1,12 +1,7 @@
 const url = "https://jsonbackend-t8is.onrender.com/";
 
-// export async function verifierUtilisateur(numero, mdp) {
-//   const res = await fetch(`${url}contacts?numero=${numero}&motDePasse=${mdp}`)
-//   const data = await res.json()
-//   return data.length ? data[0] : null
-// }
 
-
+// const url = "http://localhost:3001/"
 
 export async function getAllElements(elements) {
   try {
@@ -43,3 +38,12 @@ export async function verifierUtilisateur(numero, motDePasse) {
   return { success: true, data: utilisateur }
 }
 
+// function getUtilisateurs() {
+//   const data = localStorage.getItem("utilisateurs")
+//   return data ? JSON.parse(data) : []
+// }
+
+// // Fonction pour sauvegarder les utilisateurs dans localStorage
+// function setUtilisateurs(utilisateurs) {
+//   localStorage.setItem("utilisateurs", JSON.stringify(utilisateurs))
+// }
