@@ -1,8 +1,8 @@
-import { renderPageConnexion } from "../views/views.connexion.js"
  import { verifierUtilisateur } from "../models/model.connexion.js"
  import { validerFormulaireConnexion } from "../services/validator.service.js"
  import { afficherErreur } from "../services/error.service.js"
- import { route } from "../../routes.js"
+ import { route } from "../../routes/routes.js"
+import { renderPageConnexion } from "../views/views.connexion.js"
 
 export function afficherPageConnexion() {
   document.body.innerHTML = ""
