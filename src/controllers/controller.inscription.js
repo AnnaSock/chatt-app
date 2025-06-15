@@ -1,6 +1,7 @@
 import { renderPageInscription } from "../views/views.inscription.js"
 import { enregistrerNouvelUtilisateur } from "../models/model.inscription.js"
 import { validerFormulaireInscription } from "../services/validator.service.js"
+import { afficherErreur } from "../services/error.service.js"
 import { route } from "../../routes.js"
 
 export function afficherPageInscription() {
@@ -36,7 +37,7 @@ export function afficherPageInscription() {
       numero: champs.numero.value.trim(),
       mdp: champs.mdp.value.trim(),
     }
-
+    // console.log(nouvelUtilisateur)
     const result = await enregistrerNouvelUtilisateur(nouvelUtilisateur)
 
     if (result.success) {

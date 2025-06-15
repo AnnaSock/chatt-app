@@ -1,16 +1,24 @@
-const url = "https://jsonbackend-t8is.onrender.com/";
 
-export async function enregistrerNouvelUtilisateur(utilisateur) {
+// const url = "https://jsonbackend-t8is.onrender.com/utilisateurs";
+const url = "http://localhost:3001/utilisateurs"
+
+
+export async function enregistrerNouvelUtilisateur(utilisateurs) {
   try {
-    const response = await fetch(`${url}`)
+        
+    const response =  await fetch(url)
+
+    // console.log(response);
+    
     const data = await response.json()
 
-    const numeroExiste = data.some(u => u.numero === utilisateur.numero)
+    const numeroExiste = data.some(u => u.numero === utilisateurs.numero)
+
     if (numeroExiste) {
       return { success: false, message: "Ce numéro existe déjà" }
     }
 
-    const mdpExiste = data.some(u => u.mdp === utilisateur.mdp)
+    const mdpExiste = data.some(u => u.mdp === utilisateurs.mdp)
     if (mdpExiste) {
       return { success: false, message: "Ce mot de passe est déjà utilisé" }
     }
@@ -20,7 +28,7 @@ export async function enregistrerNouvelUtilisateur(utilisateur) {
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify(utilisateur)
+      body: JSON.stringify(utilisateurs)
     })
 
     if (!res.ok) {

@@ -17,7 +17,12 @@ const page = createElement('div',{class: "relative bg-[#262524] w-screen h-scree
                         //   createElement('div', {class: "bg-[#dbd8d4] h-[87vh]"}),
                           createElement('div', {class: "absolute top-0 left-0 w-[90vw] h-[95vh] bg-white z-1 shadow-white-500 mt-[2.5vh] ml-[5vw] flex rounded-[10rem] "}, [
                                         createElement('div', {class: "sidebar w-[5vw] h-[95vh]  bg-[#202c33] flex flex-col"}, [
-                                                     createElement('div', {class:"h-[10vh] w-[5vw] flex justify-center flex-col items-center"}, [
+                                                     createElement('div', {class:"h-[25vh] w-[5vw] flex justify-center flex-col items-center gap-4"}, [
+                                                                                createElement('i',{class: "bi bi-chat-left-text text-white  text-[1.5rem] ",}),
+                                                                                createElement('i',{class: "fa-solid fa-circle-notch text-white text-[1.5rem]",}),
+                                                                                createElement('i',{class: "bi bi-circle text-white text-[1.5rem]",}),
+                                                                                createElement('i',{class: "fa-solid fa-users text-white text-[1.5rem]",}),
+
                                                                 //    createElement('h1', {class: "font-bold text-[#e84f0b] text-[1.5rem]"}, 'Chat'),
                                                                 //    createElement('p', {class :"font-bold text-[#e84f0b]"}, 'ODC'),
 
@@ -41,17 +46,18 @@ const page = createElement('div',{class: "relative bg-[#262524] w-screen h-scree
                                                                 //   ]),
                                                            
                                                      ]),
-                                                    //  createElement('div', {class: "w-[5vw] h-[10vh] flex justify-center items-center "}, [
-                                                    //                 createElement('button', {id: "btNouveau", class: "w-[60px] h-[50px] rounded-2xl cursor-pointer  rounded-xl hover:bg-red-400 focus:bg-red-400 transition-colors",}, [
-                                                    //                 createElement('i', {class: 'fas fa-right-from-bracket text-red-500'}),])
-                                                    //  ])
+                                                     createElement('div', {class: "w-[5vw] h-[10vh] flex justify-center items-center "}, [
+                                                                    createElement('button', { class: "flex justify-center items-center" }, [
+                                                                                  createElement('div', { class: "w-[3.1vw] h-[6vh] bg-[#374248] rounded-[30px] ml-2 text-[#039393] flex items-center justify-center text-[30px]" }, `${utilisateur.prenom[0].toUpperCase() + utilisateur.nom[0].toUpperCase() }`),
+        ])
+                                                     ])
                                                      
 
                                         ]),
                                         createElement('div',{class: "zone-liste border border-black w-[28vw] h-[95vh] bg-[#111b21] flex flex-col"}, [
                                                                     
                                                      createElement('div', {class: "border border-black w-[28vw] h-[8vh] flex"}, [
-                                                                   createElement('div', {class: "border border-black w-[23vw] h-[8vh] flex items-center"}, [createElement('h1',{class: "titre text-3xl ml-[10px] "},'Messages'),]),
+                                                                   createElement('div', {class: "border border-black w-[23vw] h-[8vh] flex items-center"}, [createElement('h1',{class: "titre text-3xl ml-[10px] text-white"},'Messages'),]),
                                                                    createElement('div', {class: "border border-black w-[5vw] h-[8vh] "}, [])
                                                      ]),
                                                      createElement('div', {class: "border border-black w-[28vw] h-[8vh] flex justify-center items-center"}, [

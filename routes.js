@@ -1,6 +1,3 @@
-
-
-
 import{afficherPageConnexion} from "./src/controllers/controller.connexion.js"
 import { afficherPageAcceuil } from "./src/controllers/controller.acceuil.js"
 import { afficherPageInscription } from "./src/controllers/controller.inscription.js";
