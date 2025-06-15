@@ -4,7 +4,7 @@
 // const url = "http://localhost:3001/"
 
 
-function getApiUrl() {
+export function getApiUrl() {
   const isLocalhost = window.location.hostname === "localhost";
   return isLocalhost
     ? "http://localhost:3001/"

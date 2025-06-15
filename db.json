@@ -47,6 +47,13 @@
       "nom": "Niang",
       "numero": "777777777",
       "mdp": "bonjour"
+    },
+    {
+      "id": "be07",
+      "prenom": "Papis",
+      "nom": "Ndiaye",
+      "numero": "787777777",
+      "mdp": "manger"
     }
   ],
   "groupes": [
