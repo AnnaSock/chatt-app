@@ -2,7 +2,8 @@ import { renderPageInscription } from "../views/views.inscription.js"
 import { enregistrerNouvelUtilisateur } from "../models/model.inscription.js"
 import { validerFormulaireInscription } from "../services/validator.service.js"
 import { afficherErreur } from "../services/error.service.js"
-import { route } from "../../routes.js"
+import { route } from "../../routes/routes.js"
+
 
 export function afficherPageInscription() {
   document.body.innerHTML = ""
@@ -41,6 +42,7 @@ export function afficherPageInscription() {
     const result = await enregistrerNouvelUtilisateur(nouvelUtilisateur)
 
     if (result.success) {
+      // localStorage.setItem("uti/lisateurConnecte", JSON.stringify(nouvelUtilisateur));
       route("/connexion")
     } else {
       if (result.message.includes("numéro")) {

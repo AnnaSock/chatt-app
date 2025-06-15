@@ -4,7 +4,6 @@ import { createElement } from "../component.js"
 export function renderPageConnexion(){
     const page = createElement('div', {id:"container", class:"bg-[#111b21] min-h-screen flex flex-col items-center justify-center p-4"} , [
                         createElement('div', {}, [
-                                    //  createElement('img', {src: "/logo_odc.png?v=1", class: "w-[15rem] h-[15rem]"})
                                                                                             createElement('i', {class:"fas fa-user w-32 h-32 text-[5rem] text-white text-center"}),
 
                         ]),

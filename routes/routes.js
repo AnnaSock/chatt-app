@@ -1,7 +1,7 @@
-import{afficherPageConnexion} from "./src/controllers/controller.connexion.js"
-import { afficherPageAcceuil } from "./src/controllers/controller.acceuil.js"
-import { afficherPageInscription } from "./src/controllers/controller.inscription.js";
-import { error404 } from "./src/services/error.service.js";
+import{afficherPageConnexion} from "../src/controllers/controller.connexion.js"
+import { afficherPageAcceuil } from "../src/controllers/controller.acceuil.js"
+import { afficherPageInscription } from "../src/controllers/controller.inscription.js";
+import { error404 } from "../src/services/error.service.js";
 
 const routes = {
     "/connexion" : afficherPageConnexion,

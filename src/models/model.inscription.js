@@ -1,26 +1,23 @@
+import { getAllElements, getApiUrl } from "./model.chef.js";
 
-// const url = "https://jsonbackend-t8is.onrender.com/utilisateurs";
-const url = "http://localhost:3001/utilisateurs"
-
-
-export async function enregistrerNouvelUtilisateur(utilisateurs) {
+export async function enregistrerNouvelUtilisateur(utilisateur) {
   try {
-        
-    const response =  await fetch(url)
+    const url = getApiUrl() + "utilisateurs"; 
 
-    // console.log(response);
-    
-    const data = await response.json()
+    const data = await getAllElements("utilisateurs");
 
-    const numeroExiste = data.some(u => u.numero === utilisateurs.numero)
-
-    if (numeroExiste) {
-      return { success: false, message: "Ce numéro existe déjà" }
+    if (!data) {
+      return { success: false, message: "Erreur serveur" };
     }
 
-    const mdpExiste = data.some(u => u.mdp === utilisateurs.mdp)
+    const numeroExiste = data.some(u => u.numero === utilisateur.numero);
+    if (numeroExiste) {
+      return { success: false, message: "Ce numéro existe déjà" };
+    }
+
+    const mdpExiste = data.some(u => u.mdp === utilisateur.mdp);
     if (mdpExiste) {
-      return { success: false, message: "Ce mot de passe est déjà utilisé" }
+      return { success: false, message: "Ce mot de passe est déjà utilisé" };
     }
 
     const res = await fetch(url, {
@@ -28,17 +25,17 @@ export async function enregistrerNouvelUtilisateur(utilisateurs) {
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify(utilisateurs)
-    })
+      body: JSON.stringify(utilisateur)
+    });
 
     if (!res.ok) {
-      return { success: false, message: "Erreur lors de l'ajout" }
+      return { success: false, message: "Erreur lors de l'ajout" };
     }
 
-    return { success: true }
+    return { success: true };
 
   } catch (error) {
-    console.error("Erreur inscription:", error)
-    return { success: false, message: "Erreur serveur" }
+    console.error("Erreur inscription:", error);
+    return { success: false, message: "Erreur serveur" };
   }
 }
