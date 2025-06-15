@@ -1,9 +1,8 @@
-import { getAllElements, getApiUrl } from "./model.chef.js";
+import { getAllElements} from "./model.chef.js";
 
 
 export async function enregistrerNouvelUtilisateur(utilisateur) {
   try {
-    const url = getApiUrl() + "utilisateurs"; 
 
     const data = await getAllElements("utilisateurs");
 
