@@ -41,7 +41,7 @@ export function afficherPageInscription() {
     const result = await enregistrerNouvelUtilisateur(nouvelUtilisateur)
 
     if (result.success) {
-      localStorage.setItem("utilisateurConnecte", JSON.stringify(nouvelUtilisateur));
+      // localStorage.setItem("uti/lisateurConnecte", JSON.stringify(nouvelUtilisateur));
       route("/connexion")
     } else {
       if (result.message.includes("numéro")) {
