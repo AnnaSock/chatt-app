@@ -1,25 +1,53 @@
 // const url = "https://jsonbackend-t8is.onrender.com/";
 
 
-const url = "http://localhost:3001/"
+// const url = "http://localhost:3001/"
 
+
+function getApiUrl() {
+  const isLocalhost = window.location.hostname === "localhost";
+  return isLocalhost
+    ? "http://localhost:3001/"
+    : "https://jsonbackend-t8is.onrender.com/"
+}
+
+const url = getApiUrl();
+
+// export async function getAllElements(elements) {
+//   try {
+//     const res = await fetch(`${url}${elements}`)
+//     console.log(res)
+//     if (!res.ok) {
+//       throw new Error(`Erreur HTTP ${res.status} : ${res.statusText}`)
+//     }
+
+//     return await res.json()
+    
+//   } catch (error) {
+//     console.error("Erreur dans getAllElements :", error.message)
+//     return null
+//   }
+// }
 
 export async function getAllElements(elements) {
   try {
-    const res = await fetch(`${url}${elements}`)
-    // console.log(res)
+    const res = await fetch(`${url}${elements}`);
+
     if (!res.ok) {
-      throw new Error(`Erreur HTTP ${res.status} : ${res.statusText}`)
+      throw new Error(`Erreur HTTP ${res.status} : ${res.statusText}`);
     }
 
-    return await res.json()
+    const data = await res.json();
+
+    return data;
   } catch (error) {
-    console.error("Erreur dans getAllElements :", error.message)
-    return null
+    console.error("Erreur dans getAllElements :", error.message);
+    return null;
   }
 }
 
-export async function verifierUtilisateur(numero, motDePasse) {
+
+export async function verifierUtilisateur(numero, mdp) {
   const utilisateurs = await getAllElements("utilisateurs")
   
   if (!utilisateurs || utilisateurs.length === 0) {
@@ -36,8 +64,8 @@ export async function verifierUtilisateur(numero, motDePasse) {
     return { success: false, erreur: "numero" }
   }
 
-  if (utilisateurs.motDePasse !== motDePasse) {
-    return { success: false, erreur: "motDePasse" }
+  if (utilisateur.mdp !== mdp) {
+    return { success: false, erreur: "mdp" }
   }
 
   return { success: true, data: utilisateur }
