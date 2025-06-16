@@ -1,7 +1,7 @@
 import { createElement } from "../../component.js"
 import { sidebar } from "./views.sidebar.js"
 import { zoneListe } from "./views.zone-liste.js"
-import { zoneMessage } from "./views.zone-message.js"
+import {zoneMessage} from "./views.zone-message.js"
 
 
 
