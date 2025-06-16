@@ -1,7 +1,7 @@
 export function getApiUrl() {
   const isLocalhost = window.location.hostname === "localhost";
   return isLocalhost
-    ? "http://localhost:3001/"
+    ? "/api/"
     : "https://jsonbackend-t8is.onrender.com/"
 }
 
