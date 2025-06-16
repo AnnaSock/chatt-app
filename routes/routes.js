@@ -18,7 +18,7 @@ const routes = {
 export function route(chemin) {
     const views = routes[chemin];
     if (views) {
-        window.history.pushState({}, "", chemin);
+        // window.history.pushState({}, "", chemin);
         views();
     } else {
         error404()
