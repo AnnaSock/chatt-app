@@ -15,16 +15,7 @@ export function zoneListe(){
                                                      createElement('div', {class: " w-[28vw] h-[8vh] border-b border-gray-800 flex justify-center items-center"}, [
                                                                  createElement('input', {placeholder: 'Rechercher', class: "w-[25vw] h-[4vh] bg-[#202c33] rounded-[10px] pl-[2vw] outline-none"}),
                                                      ]),
-                                                     createElement('div', {id: "zone-echange", class: 'w-[28vw] h-[79vh]  flex flex-col  overflow-scroll'}, [
-           
-
-                                 
-                                                                  
-                                       
-                                                                  
-
-
-                                                     ]) 
+                                                     createElement('div', {id: "zone-echange", class: 'w-[28vw] h-[79vh]  flex flex-col  overflow-scroll'}, []) 
 
 
                                         ])
