@@ -1,3 +1,4 @@
+import { afficherFormulaireContact } from "../src/views/acceuils/zone-listes/views.formulaire-contact"
 import { afficherListeMessage } from "../src/views/acceuils/zone-listes/views.message"
 import { afficherListeNouveau } from "../src/views/acceuils/zone-listes/views.nouveau"
 
@@ -5,9 +6,9 @@ import { afficherListeNouveau } from "../src/views/acceuils/zone-listes/views.no
 
 
 
-
 const options= {
       "boutonMessage" :  afficherListeMessage,
+      "nContact": afficherFormulaireContact,
       // "boutonActu": afficherActu,
       // "boutonArchive" :afficherListeArchive,
       // "boutonGroupe" : afficherListeGroupe,
