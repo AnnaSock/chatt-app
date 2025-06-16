@@ -37,7 +37,7 @@ export function afficherPageInscription() {
       nom: champs.nom.value.trim(),
       numero: champs.numero.value.trim(),
       mdp: champs.mdp.value.trim(),
-      contact: "2"
+      // contact: "2"
     }
     // console.log(nouvelUtilisateur)
     const result = await enregistrerNouvelUtilisateur(nouvelUtilisateur)

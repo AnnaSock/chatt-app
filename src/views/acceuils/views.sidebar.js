@@ -1,5 +1,8 @@
 import { navigate } from "../../../routes/mini.route";
 import { createElement } from "../../component"
+
+
+
 export function iconeAvecInfo(iconeClasse, texteInfo, onClickCallback, id) {
   return createElement("div", {
     id,
