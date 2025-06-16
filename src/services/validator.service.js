@@ -9,6 +9,11 @@ export function validerFormulaireConnexion(champs, erreurs) {
   const numero = champs.numero.value.trim()
   const mdp = champs.mdp.value.trim()
 
+  // console.log(numero)
+  // console.log(mdp)
+
+
+
   if (!numero) {
     afficherErreur("Le numéro est requis", erreurs.numero)
     estValide = false
@@ -38,6 +43,11 @@ export function validerFormulaireConnexion(champs, erreurs) {
       const numero = champs.numero.value.trim()
       const mdp = champs.mdp.value.trim()
     
+      // console.log(prenom);
+      // console.log(nom);
+      // console.log(numero);
+      // console.log(mdp);
+      
       if (!prenom) {
         afficherErreur("Le prénom est requis", erreurs.prenom)
         estValide = false

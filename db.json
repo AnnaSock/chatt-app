@@ -1,23 +1,64 @@
 {
-  "contacts": [
+  "utilisateurs": [
     {
       "id": "1",
       "nom": "Sock",
       "prenom": "Anna",
       "numero": "781832623",
-      "motDePasse": "passer"
+      "mdp": "passer",
+      "contacts": [
+        "2"
+      ]
     },
     {
       "id": "2",
       "nom": "Sy",
       "prenom": "Anta",
       "numero": "786556543",
-      "motDePasse": "passer1"
+      "mdp": "passer1",
+      "contacts": [
+        "1"
+      ]
+    },
+    {
+      "id": "013c",
+      "prenom": "Astou",
+      "nom": "Diop",
+      "numero": "781832624",
+      "mdp": "passer2"
+    },
+    {
+      "id": "9423",
+      "prenom": "Sarah",
+      "nom": "Sock",
+      "numero": "776120491",
+      "mdp": "passer4"
+    },
+    {
+      "id": "c2ac",
+      "prenom": "Awa",
+      "nom": "Sock",
+      "numero": "781832622",
+      "mdp": "passer4612"
+    },
+    {
+      "id": "f422",
+      "prenom": "Bijou",
+      "nom": "Niang",
+      "numero": "777777777",
+      "mdp": "bonjour"
+    },
+    {
+      "id": "be07",
+      "prenom": "Papis",
+      "nom": "Ndiaye",
+      "numero": "787777777",
+      "mdp": "manger"
     }
   ],
   "groupes": [
     {
-      "id": 1,
+      "id": "1",
       "nom": "mafia",
       "membres": "2"
     }
