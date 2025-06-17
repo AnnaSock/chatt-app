@@ -76,3 +76,35 @@ export function validerFormulaireConnexion(champs, erreurs) {
     
       return estValide
     }
+
+
+
+ export function validerFormulaireContact(champs, erreurs){
+      let estValide = true
+      Object.values(erreurs).forEach(effacerErreur)
+
+      const prenom= champs.prenom.value.trim()
+      const nom= champs.nom.value.trim()
+      const numero= champs.numero.value.trim()
+
+      if (!prenom) {
+        afficherErreur("Le prénom est requis", erreurs.prenom)
+        estValide = false
+      }
+    
+      if (!nom) {
+        afficherErreur("Le nom est requis", erreurs.nom)
+        estValide = false
+      }
+    
+      if (!numero) {
+        afficherErreur("Le numéro est requis", erreurs.numero)
+        estValide = false
+      } else if (!/^\d+$/.test(numero)) {
+        afficherErreur("Le numéro doit contenir uniquement des chiffres", erreurs.numero)
+        estValide = false
+      }
+
+      return estValide
+
+ }   

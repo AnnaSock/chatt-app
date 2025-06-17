@@ -9,7 +9,7 @@ export function zoneListe(){
                                                      createElement('div', {class: "w-[28vw] h-[8vh] flex border-b border-gray-800"}, [
                                                                    createElement('div', {class: "w-[23vw] h-[8vh] flex items-center"}, [createElement('h1',{class: "titre text-3xl ml-[10px] text-white", id: "titreZone"},'Messages'),]),
                                                                    createElement('div', {class: "w-[5vw] h-[8vh] flex items-center justify-center "}, [
-                                                                                createElement('i', {class: "fa-solid fa-user-plus text-white cursor-pointer", onclick:()=> {navigate("boutonNouveau")} })
+                                                                                createElement('i', {class: "fa-solid fa-user-plus text-[#039393] cursor-pointer", onclick:()=> {navigate("boutonNouveau")} })
                                                                    ])
                                                      ]),
                                                      createElement('div', {class: " w-[28vw] h-[8vh] border-b border-gray-800 flex justify-center items-center"}, [
