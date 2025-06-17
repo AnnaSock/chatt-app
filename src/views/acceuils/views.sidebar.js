@@ -1,4 +1,4 @@
-import { navigate } from "../../../routes/mini.route";
+import { route } from "../../../routes/routes";
 import { createElement } from "../../component"
 
 
@@ -66,8 +66,10 @@ export function sidebar(){
     
                                                          ]),
 
-                                                         createElement('div', {class: "flex flex-col justify-center items-center mt-[55vh] gap-2"}, [
-                                                                        iconeAvecInfo("fa-solid fa-gear ", "Paramètres", () => changerTitreZone("Paramètres"), "icone-paramètres"),
+                                                         createElement('div', {class: "flex flex-col justify-center items-center mt-[45vh] gap-2"}, [
+                                                                         iconeAvecInfo("fas fa-right-from-bracket", "Deconnexion", () =>  route("/connexion"), "icone-deconnexion"),
+
+                                                                        iconeAvecInfo("fa-solid fa-gear ", "Paramètres", () => changerTitreZone("Paramètres"), "icone-parametres"),
 
                                                                         createElement('button', { class: "flex justify-center items-center" }, [
                                                                                       createElement('div', { class: "w-[3.1vw] h-[6vh] bg-[#374248] rounded-[30px] ml-0.5 text-[#039393] flex items-center justify-center text-[30px]" }, `${utilisateur.prenom[0].toUpperCase() + utilisateur.nom[0].toUpperCase() }`),

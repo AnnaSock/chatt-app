@@ -7,6 +7,7 @@ const routes = {
     "/connexion" : afficherPageConnexion,
     "/acceuil" : afficherPageAcceuil,
     "/inscription" : afficherPageInscription,
+    "/deconnexion": afficherPageConnexion,
 }
 
 // export function route(chemin){
@@ -18,7 +19,6 @@ const routes = {
 export function route(chemin) {
     const views = routes[chemin];
     if (views) {
-        // window.history.pushState({}, "", chemin);
         views();
     } else {
         error404()
