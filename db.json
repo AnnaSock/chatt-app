@@ -7,7 +7,8 @@
       "numero": "781832623",
       "mdp": "passer",
       "contacts": [
-        
+        "2",
+        "b8bd"
       ]
     },
     {
@@ -17,11 +18,22 @@
       "numero": "786556543",
       "mdp": "passer1",
       "contacts": [
+        "b8bd",
+        "2"
         
       ]
+    },
+    {
+      "id": "b8bd",
+      "prenom": "Abdou",
+      "nom": "Diallo",
+      "numero": "776120490",
+      "mdp": "passer3",
+      "contacts": [
+        "2",
+        "1"
+      ]
     }
-    
-    
   ],
   "groupes": [
     {
@@ -30,33 +42,23 @@
       "membres": "2"
     }
   ],
-
   "messages": [
     {
-      "id":"1",
+      "id": "1",
       "contenu": "Salam",
       "envoyePar": "1",
       "recuPar": "2",
-      "heure" : "12:00",
-      "typeMess" : "text"
+      "heure": "12:00",
+      "typeMess": "text"
     },
-
     {
-      "id":"1",
+      "id": "1",
       "contenu": "Salam comment vas tu",
       "envoyePar": "2",
       "recuPar": "1",
-      "heure" : "12:05",
-      "typeMess" : "text"
+      "heure": "12:05",
+      "typeMess": "text"
     }
-    
-    
   ],
-
-  
-  "_comment" : "typeMess peut etre aussi image video ou audio a l'avenir"
-    
-  
-  
+  "_comment": "typeMess peut etre aussi image video ou audio a l'avenir"
 }
-

@@ -1,6 +1,6 @@
+import { navigate } from "../../../routes/mini.route";
 import { route } from "../../../routes/routes";
 import { createElement } from "../../component"
-
 
 
 export function iconeAvecInfo(iconeClasse, texteInfo, onClickCallback, id) {
@@ -59,14 +59,16 @@ export function sidebar(){
      const sidebar= createElement('div', {class: "sidebar w-[5vw] h-[95vh]  bg-[#202c33] flex flex-col"}, [
                                                          createElement('div', {class:"flex justify-center flex-col items-center mt-[2vh]"}, [
                                                                                     iconeAvecInfo("bi bi-chat-left-text", "Messages", () => {changerTitreZone("Messages"), navigate("boutonMessage")}, "icone-messages"),
-                                                                                    iconeAvecInfo("fa-solid fa-circle-notch", "Actus", () => changerTitreZone("Actus"), "icone-actus"),
+                                                                                    iconeAvecInfo("fa-solid fa-circle-notch", "Actus", () => {changerTitreZone("Actus")}, "icone-actus"),
                                                                                     iconeAvecInfo("fa-solid fa-box-archive", "Archives", () => changerTitreZone("Archives"), "icone-archives"),
                                                                                     iconeAvecInfo("fa-solid fa-users", "Groupes", () => changerTitreZone("Groupes"), "icone-groupes"),
+                                                                                    iconeAvecInfo("fa-solid fa-user", "Mes contacts", () => {changerTitreZone("Mes contacts"), navigate("boutonContact")}, "icone-contacts"),
+
     
     
                                                          ]),
 
-                                                         createElement('div', {class: "flex flex-col justify-center items-center mt-[45vh] gap-2"}, [
+                                                         createElement('div', {class: "flex flex-col justify-center items-center mt-[40vh] gap-2"}, [
                                                                          iconeAvecInfo("fas fa-right-from-bracket", "Deconnexion", () =>  route("/connexion"), "icone-deconnexion"),
 
                                                                         iconeAvecInfo("fa-solid fa-gear ", "Paramètres", () => changerTitreZone("Paramètres"), "icone-parametres"),

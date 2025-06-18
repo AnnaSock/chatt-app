@@ -55,10 +55,12 @@ export function ajouterContact(){
 
      if(uConnecte.id === contactTrouve.id){
             afficherErreur("Tu ne peux pas t'ajouter toi meme comme contact", erreurs.numero)
+            return
      }
 
      if(uConnecte.contacts.includes(contactTrouve.id)){
             afficherErreur("ce contact existe déjà dans ta liste de contact", erreurs.numero)
+            return
      }
 
      uConnecte.contacts.push(contactTrouve.id)

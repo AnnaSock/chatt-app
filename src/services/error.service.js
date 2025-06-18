@@ -6,7 +6,6 @@ import { createElement } from "../component.js";
 export function afficherErreur(message, tag) {
     tag.textContent = message;
     tag.classList.remove('hidden');
-    tag.classList.add('block');
 }
 
 export function effacerErreur(tag) {

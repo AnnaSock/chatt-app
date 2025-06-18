@@ -10,9 +10,9 @@ export function zoneMessage(){
 
                                                       // Apres le click la discussions apparait
 
-                                                    //  createElement('div', {class: "border border-bl1remack h-[10vh] "}, ),
-                                                    //  createElement("div", {class: "border border-black h-[75vh] "}),
-                                                    //  createElement('div', {class: "border border-black h-[10vh] "})
+                                                    //  createElement('div', {class: "border border-black w-full h-[10vh] "}, ),
+                                                    //  createElement("div", {class: "border border-black w-full h-[75vh] "}),
+                                                    //  createElement('div', {class: "border border-black w-full h-[10vh] "})
                                         ])
      return   zoneMessage                                         
 }
